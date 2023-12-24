@@ -100,7 +100,7 @@ def plot_by_type_usage(df):
     st.pyplot(fig)
     
 def show_user_statistics(df):
-    st.markdown("### Statistik Deskriptif Pengguna Terdaftar")
+    st.markdown("##### Statistik Deskriptif Pengguna Terdaftar")
     max_registered = df['Registered_Users'].max()        
     min_registered = df['Registered_Users'].min()
     total_registered = df['Registered_Users'].sum()
@@ -113,7 +113,7 @@ def show_user_statistics(df):
     with col3:
         st.metric(label="Total", value=total_registered)
     
-    st.markdown("### Statistik Deskriptif Pengguna Tidak Terdaftar")
+    st.markdown("##### Statistik Deskriptif Pengguna Tidak Terdaftar")
     max_casual = df['Casual_Users'].max()
     min_casual = df['Casual_Users'].min()
     total_casual = df['Casual_Users'].sum()
@@ -195,9 +195,10 @@ def main():
 
     with col4:
         plot_wind_speed(df)
-    
-    plot_by_type_usage(df)
+
+    print("\n")
     show_user_statistics(df)
+    plot_by_type_usage(df)
     plot_average_usage(df)
     plot_holiday_usage(df)
     plot_usage_by_weather(df)
