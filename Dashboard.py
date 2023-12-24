@@ -29,9 +29,6 @@ def load_data():
         'cnt': 'Total_Count'
     }, inplace=True)
     return df
-
-if st.checkbox('Show raw data'):
-    st.write(df.head())
     
 def plot_yearly_trend(df):
     st.markdown('##### Tren Tahunan Penggunaan Sepeda')
@@ -148,6 +145,11 @@ def main():
     st.title('Bike Sharing Data Analysis Dashboard')
 
     df = load_data()
+    if st.checkbox('Show raw data'):
+        st.write(df.head())
+
+    if st.checkbox('Show data description'):
+        st.write(df.describe())
     plot_yearly_trend(df)
     plot_usage_comparison(df)
 
