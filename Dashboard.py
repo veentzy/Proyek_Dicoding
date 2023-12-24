@@ -197,7 +197,7 @@ def main():
         plot_wind_speed(df)
     
     plot_by_type_usage(df)
-    show_user_statistic(df)
+    show_user_statistics(df)
     plot_average_usage(df)
     plot_holiday_usage(df)
     plot_usage_by_weather(df)
