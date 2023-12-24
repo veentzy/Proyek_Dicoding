@@ -177,30 +177,34 @@ def main():
 
     if st.checkbox('Show data description'):
         st.write(df.describe())
+        
+    st.markdown('<br>', unsafe_allow_html=True)
     plot_yearly_trend(df)
+    st.markdown('<br>', unsafe_allow_html=True)
     plot_usage_comparison(df)
 
+    st.markdown('<br>', unsafe_allow_html=True)
     col1, col2 = st.columns([1,1])
-
     with col1:
         plot_actual_temp(df)
-
     with col2:
         plot_apparent_temp(df)
-
+        
+    st.markdown('<br>', unsafe_allow_html=True)
     col3, col4 = st.columns(2)
-
     with col3:
         plot_humidity(df)
-
     with col4:
         plot_wind_speed(df)
 
-    print("\n")
+    st.markdown('<br>', unsafe_allow_html=True)
     show_user_statistics(df)
     plot_by_type_usage(df)
+    st.markdown('<br>', unsafe_allow_html=True)
     plot_average_usage(df)
+    st.markdown('<br>', unsafe_allow_html=True)
     plot_holiday_usage(df)
+    st.markdown('<br>', unsafe_allow_html=True)
     plot_usage_by_weather(df)
 
 # Run the main app
