@@ -111,7 +111,7 @@ def show_user_statistics(df):
     with col2:
         st.metric(label="Min", value=min_registered)
     with col3:
-        st.metric(label="Total", value=total_registered)
+        st.metric(label="Total (All Time)", value=total_registered)
     
     st.markdown("##### Pengguna Tidak Terdaftar Harian")
     max_casual = df['Casual_Users'].max()
@@ -124,7 +124,7 @@ def show_user_statistics(df):
     with col5:
         st.metric(label="Min", value=min_casual)
     with col6:
-        st.metric(label="Total", value=total_casual)
+        st.metric(label="Total (All Time)", value=total_casual)
         
 def plot_average_usage(df):
     st.markdown('##### Penggunaan Sepeda Rata-Rata Per Hari')
