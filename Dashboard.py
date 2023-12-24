@@ -8,7 +8,7 @@ import numpy as np
 # Function to load the data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('C:/Users/a7ary/Dicoding/Bike/day.csv')
+    df = pd.read_csv('day.csv')
     df.rename(columns={
         'instant': 'Instant',
         'dteday': 'Date_Day',
