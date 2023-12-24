@@ -30,6 +30,9 @@ def load_data():
     }, inplace=True)
     return df
 
+if st.checkbox('Show raw data'):
+    st.write(df.head())
+    
 def plot_yearly_trend(df):
     st.markdown('##### Tren Tahunan Penggunaan Sepeda')
     yearly_usage = df.groupby('Year')['Total_Count'].sum().reset_index()
