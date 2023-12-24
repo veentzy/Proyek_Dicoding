@@ -100,7 +100,7 @@ def plot_by_type_usage(df):
     st.pyplot(fig)
     
 def show_user_statistics(df):
-    st.markdown("##### Pengguna Terdaftar Harian")
+    st.markdown("##### Pengguna Terdaftar (Harian)")
     max_registered = df['Registered_Users'].max()        
     min_registered = df['Registered_Users'].min()
         
@@ -110,7 +110,7 @@ def show_user_statistics(df):
     with col2:
         st.metric(label="Min", value=min_registered)
     
-    st.markdown("##### Pengguna Tidak Terdaftar Harian")
+    st.markdown("##### Pengguna Tidak Terdaftar (Harian)")
     max_casual = df['Casual_Users'].max()
     min_casual = df['Casual_Users'].min()
         
